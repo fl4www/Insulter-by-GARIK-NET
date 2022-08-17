@@ -1,0 +1,53 @@
+@import './constants';
+
+.container {
+	max-width: ($container + $containerPadding) + px;
+	margin: 0px auto;
+	
+	@media (max-width: $breakpoint1510) {
+		max-width: 1490px;
+	}
+	
+	@media (max-width: $breakpoint1152) {
+		max-width: 1130px;
+	}
+	
+	@media (max-width: $breakpoint992) {
+		max-width: 970px;
+	}
+	
+	@media (max-width: $breakpoint768) {
+		max-width: 740px;
+	}
+	
+	@media (max-width: $breakpoint480) {
+		max-width: none;
+	}
+	
+	@media (max-width: $breakpoint320) {
+		max-width: none;
+	}
+}
+
+// Body Settings
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: $fontSize;
+	
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+// Wrapper & Main settings
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+	background: linear-gradient(300deg, #FEC9F9, #ECFDFF 70.94%);
+}
